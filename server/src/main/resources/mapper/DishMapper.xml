@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manager.login.Mapper.DishMapper">
+    <resultMap id="dish_result" type="com.manager.login.Entity.Dish">
+      <result column="dish_id" jdbcType="INTEGER" property="dish_id"/>
+        <result column="dish_name" jdbcType="VARCHAR" property="dish_name"/>
+        <result column="dish_price" jdbcType="DECIMAL" property="dish_price"/>
+        <result column="discount" jdbcType="DECIMAL" property="dish_discount"/>
+        <result column="description" jdbcType="VARCHAR" property="dish_description"/>
+        <result column="type" jdbcType="VARCHAR" property="dish_type"/>
+        <result column="quantity" jdbcType="INTEGER" property="dish_quantity"/>
+        <result column="state" jdbcType="INTEGER" property="dish_state"/>
+        <result column="picture" jdbcType="VARCHAR" property="dish_picture"/>
+    </resultMap>
+    <resultMap id="dish_ordered_result" type="com.manager.login.Entity.Dish_ordered">
+        <result column="order_dish_id" jdbcType="INTEGER" property="order_dish_id"/>
+        <result column="order_id" jdbcType="INTEGER" property="order_id"/>
+        <result column="dish_id" jdbcType="INTEGER" property="dish_id"/>
+        <result column="dish_num" jdbcType="INTEGER" property="dish_num"/>
+        <result column="dish_state" jdbcType="INTEGER" property="dish_state"/>
+        <result column="note" jdbcType="VARCHAR" property="note"/>
+        <result column="dish_name" jdbcType="VARCHAR" property="dish_name"/>
+        <result column="dish_price" jdbcType="DECIMAL" property="dish_price"/>
+    </resultMap>
+    <delete id="deleteDish_ordered" parameterType="int">
+        delete from order_dish where order_id=#{order_id} and dish_id=#{dish_id}
+    </delete>
+    <insert id="insertDish_ordered" parameterType="com.manager.login.Entity.Dish_ordered">
+        insert into order_dish(order_id,dish_id,dish_num,dish_state,note,dish_name,dish_price)
+        values(
+        #{order_id},#{dish_id},#{dish_num},#{dish_state},#{note},#{dish_name},#{dish_price}
+        );
+    </insert>
+    <select id="selectOrderedDish" parameterType="int" resultMap="dish_ordered_result">
+        select * from order_dish where order_id=#{order_id};
+    </select>
+    <select id="selectDish_byID" parameterType="int" resultMap="dish_result">
+        select * from dish where dish_id=#{dish_id};
+    </select>
+    <select id="showDish_All" resultMap="dish_result">
+        select * from dish limit #{offset},#{pagesize};
+    </select>
+    <insert id="insertDish" parameterType="com.manager.login.Entity.Dish">
+        insert into dish(dish_name,dish_price,discount,description,type,state,picture)
+        values(
+        #{dish_name},#{dish_price},#{dish_discount},#{dish_description},#{dish_type},#{dish_state},#{dish_picture});
+    </insert>
+    <update id="updateDish" parameterType="com.manager.login.Entity.Dish">
+        update dish set dish_name=#{dish_name},dish_price=#{dish_price},discount=#{dish_discount},description=#{description},type=#{dish_type},
+        state=#{dish_state},picture=#{dish_picture} where dish_id=#{dish_id};
+    </update>
+    <update id="updateDish_ordered" parameterType="com.manager.login.Entity.Dish_ordered">
+        update order_dish set dish_num=#{dish_num},dish_state=#{dish_state},note=#{note} where dish_id=#{dish_id} and order_id=#{order_id};
+    </update>
+    <select id="selectOrderedDishbyState" resultMap="dish_ordered_result">
+        select * from order_dish where dish_state=#{state} limit #{offset},#{pagesize};
+    </select>
+</mapper>

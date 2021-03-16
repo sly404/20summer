@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">修改信息</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">登出</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">欢迎最高管理员</a>
+          </li>
+        </li>
+      </ul>
+    <div class="jumbotron">
+        <h1 class="display-4">登录成功</h1>
+        <p class="lead">欢迎进入后台管理系统</p>
+      </div>
+      <div class="row">
+    <div class="col-md-1">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">员工管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">会员管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">数据分析</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">权限管理</a>
+            </li>
+          </ul>
+    </div>
+    <div class="col-md-11">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">sex</th>
+                <th scope="col">age</th>
+                <th scope="col">idcard</th>
+                <th scope="col">type</th>
+                <th scope="col">state</th>
+              </tr>
+            </thead>
+            <tbody id = "tablebody">
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    //获取basePath，测试的话就能用就完了
+    var obj = window.document.location;
+    var BASE_PATH = obj.href.substring(0, obj.href.indexOf(obj.pathname));
+    //请求传参模拟
+
+    $(document).ready(function () {
+        $.ajax({
+            url: 'http://localhost:8080/getemployer',
+            type : 'GET',
+            success: function f(data) {
+                console.log(data);
+                var t1 = data[0];
+                var str = 
+                '<tr>'
+                +'<th scope="row">'+t1.id+'</th>'
+                +'<td>'+t1.name+'</td>'
+                +'<td>'+t1.sex+'</td>'
+                +'<td>'+t1.age+'</td>'
+                +'<td>'+t1.idcard+'</td>'
+                +'<td>'+t1.type+'</td>'
+                +'<td>'+t1.state+'</td>'
+                +'</tr>';
+                document.getElementById('tablebody').innerHTML=str;
+                debugger;
+            }
+        })
+    });
+</script>
+</html>

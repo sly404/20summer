@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<!-- 编辑人：施立耀 -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>老街烧烤，记录你生活的烟火气</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+		<meta content="Coderthemes" name="author" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- App favicon -->
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+		<!-- DataTables -->
+		<link href="../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+		<link href="../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+		<!--chartist Chart CSS -->
+		<link rel="stylesheet" href="../plugins/chartist/css/chartist.min.css">
+
+		<!-- App css -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+		<script src="assets/js/modernizr.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- Navigation Bar-->
+		<header id="topnav">
+			<div class="topbar-main">
+				<div class="container-fluid">
+
+					<!-- Logo container-->
+					<div class="logo">
+						<!-- Text Logo -->
+						<!-- <a href="index.html" class="logo">
+                            <span class="logo-small"><i class="mdi mdi-radar"></i></span>
+                            <span class="logo-large"><i class="mdi mdi-radar"></i> Highdmin</span>
+                        </a> -->
+						<!-- Image Logo -->
+						<a href="index.html" class="logo">
+							<img src="assets/images/logo_sm.png" alt="" height="26" class="logo-small">
+							<img src="assets/images/logo.png" alt="" height="22" class="logo-large">
+						</a>
+
+					</div>
+					<!-- End Logo container-->
+
+
+					<div class="menu-extras topbar-custom">
+
+						<ul class="list-unstyled topbar-right-menu float-right mb-0">
+
+							<li class="menu-item">
+								<!-- Mobile menu toggle-->
+								<a class="navbar-toggle nav-link">
+									<div class="lines">
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+								</a>
+								<!-- End mobile menu toggle-->
+							</li>
+							<li class="dropdown notification-list hide-phone">
+								<a class="nav-link dropdown-toggle waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+								 aria-haspopup="false" aria-expanded="false">
+									<i class="mdi mdi-earth"></i> English <i class="mdi mdi-chevron-down"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item">
+										Spanish
+									</a>
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item">
+										Italian
+									</a>
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item">
+										French
+									</a>
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item">
+										Russian
+									</a>
+
+								</div>
+							</li>
+
+							<li class="dropdown notification-list">
+								<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+								 aria-haspopup="false" aria-expanded="false">
+									<i class="fi-bell noti-icon"></i>
+									<span class="badge badge-danger badge-pill noti-icon-badge">4</span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+									<!-- item-->
+									<div class="dropdown-item noti-title">
+										<h6 class="m-0"><span class="float-right"><a href="" class="text-dark"><small>Clear All</small></a> </span>Notification</h6>
+									</div>
+
+									<div class="slimscroll" style="max-height: 230px;">
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon bg-success"><i class="mdi mdi-comment-account-outline"></i></div>
+											<p class="notify-details">Caleb Flakelar commented on Admin<small class="text-muted">1 min ago</small></p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon bg-info"><i class="mdi mdi-account-plus"></i></div>
+											<p class="notify-details">New user registered.<small class="text-muted">5 hours ago</small></p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon bg-danger"><i class="mdi mdi-heart"></i></div>
+											<p class="notify-details">Carlos Crouch liked <b>Admin</b><small class="text-muted">3 days ago</small></p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon bg-warning"><i class="mdi mdi-comment-account-outline"></i></div>
+											<p class="notify-details">Caleb Flakelar commented on Admin<small class="text-muted">4 days ago</small></p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon bg-purple"><i class="mdi mdi-account-plus"></i></div>
+											<p class="notify-details">New user registered.<small class="text-muted">7 days ago</small></p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon bg-custom"><i class="mdi mdi-heart"></i></div>
+											<p class="notify-details">Carlos Crouch liked <b>Admin</b><small class="text-muted">13 days ago</small></p>
+										</a>
+									</div>
+
+									<!-- All-->
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+										View all <i class="fi-arrow-right"></i>
+									</a>
+
+								</div>
+							</li>
+
+							<li class="dropdown notification-list">
+								<a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+								 aria-haspopup="false" aria-expanded="false">
+									<i class="fi-speech-bubble noti-icon"></i>
+									<span class="badge badge-dark badge-pill noti-icon-badge">6</span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+									<!-- item-->
+									<div class="dropdown-item noti-title">
+										<h6 class="m-0"><span class="float-right"><a href="" class="text-dark"><small>Clear All</small></a> </span>Chat</h6>
+									</div>
+
+									<div class="slimscroll" style="max-height: 230px;">
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon"><img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
+											</div>
+											<p class="notify-details">Cristina Pride</p>
+											<p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon"><img src="assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle" alt="" />
+											</div>
+											<p class="notify-details">Sam Garret</p>
+											<p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon"><img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
+											</div>
+											<p class="notify-details">Karen Robinson</p>
+											<p class="text-muted font-13 mb-0 user-msg">Wow that's great</p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon"><img src="assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle" alt="" />
+											</div>
+											<p class="notify-details">Sherry Marshall</p>
+											<p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
+										</a>
+
+										<!-- item-->
+										<a href="javascript:void(0);" class="dropdown-item notify-item">
+											<div class="notify-icon"><img src="assets/images/users/avatar-6.jpg" class="img-fluid rounded-circle" alt="" />
+											</div>
+											<p class="notify-details">Shawn Millard</p>
+											<p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
+										</a>
+									</div>
+
+									<!-- All-->
+									<a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+										View all <i class="fi-arrow-right"></i>
+									</a>
+
+								</div>
+							</li>
+
+							<li class="dropdown notification-list">
+								<a class="nav-link dropdown-toggle waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+								 aria-haspopup="false" aria-expanded="false">
+									<img src="assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle"> <span class="ml-1 pro-user-name">Maxine
+										K <i class="mdi mdi-chevron-down"></i> </span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+									<!-- item-->
+									<div class="dropdown-item noti-title">
+										<h6 class="text-overflow m-0">Welcome !</h6>
+									</div>
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item notify-item">
+										<i class="fi-head"></i> <span>My Account</span>
+									</a>
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item notify-item">
+										<i class="fi-cog"></i> <span>Settings</span>
+									</a>
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item notify-item">
+										<i class="fi-help"></i> <span>Support</span>
+									</a>
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item notify-item">
+										<i class="fi-lock"></i> <span>Lock Screen</span>
+									</a>
+
+									<!-- item-->
+									<a href="javascript:void(0);" class="dropdown-item notify-item">
+										<i class="fi-power"></i> <span>Logout</span>
+									</a>
+
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- end menu-extras -->
+
+					<div class="clearfix"></div>
+
+				</div> <!-- end container -->
+			</div>
+			<!-- end topbar-main -->
+
+			<div class="navbar-custom">
+				<div class="container-fluid">
+					<div id="navigation">
+						<!-- Navigation Menu-->
+						<ul class="navigation-menu">
+
+							<li class="has-submenu">
+								<a href="index.html"><i class="icon-speedometer"></i>Dashboard</a>
+							</li>
+
+							<li class="has-submenu">
+								<a href="#"><i class="icon-layers"></i>Apps</a>
+								<ul class="submenu">
+									<li><a href="apps-calendar.html">Calendar</a></li>
+									<li><a href="ordermanage.html">Tickets</a></li>
+									<li><a href="apps-taskboard.html">Task Board</a></li>
+									<li><a href="apps-task-detail.html">Task Detail</a></li>
+									<li><a href="apps-contacts.html">Contacts</a></li>
+									<li><a href="apps-projects.html">Projects</a></li>
+									<li><a href="apps-companies.html">Companies</a></li>
+									<li><a href="apps-file-manager.html">File Manager</a></li>
+								</ul>
+							</li>
+
+							<li class="has-submenu">
+								<a href="#"><i class="icon-briefcase"></i>UI Elements</a>
+								<ul class="submenu megamenu">
+									<li>
+										<ul>
+											<li><a href="ui-typography.html">Typography</a></li>
+											<li><a href="ui-cards.html">Cards</a></li>
+											<li><a href="ui-buttons.html">Buttons</a></li>
+											<li><a href="ui-modals.html">Modals</a></li>
+											<li><a href="ui-spinners.html">Spinners</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li><a href="ui-ribbons.html">Ribbons</a></li>
+											<li><a href="ui-tooltips-popovers.html">Tooltips & Popover</a></li>
+											<li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
+											<li><a href="ui-tabs.html">Tabs</a></li>
+											<li><a href="ui-progressbars.html">Progress Bars</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li><a href="ui-notifications.html">Notification</a></li>
+											<li><a href="ui-grid.html">Grid</a></li>
+											<li><a href="ui-sweet-alert.html">Sweet Alert</a></li>
+											<li><a href="ui-bootstrap.html">Bootstrap UI</a></li>
+											<li><a href="ui-range-slider.html">Range Slider</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li class="has-submenu">
+								<a href="#"><i class="icon-fire"></i>Components</a>
+								<ul class="submenu">
+									<li class="has-submenu">
+										<a href="#">Email</a>
+										<ul class="submenu">
+											<li><a href="email-inbox.html">Inbox</a></li>
+											<li><a href="email-read.html">Read Email</a></li>
+											<li><a href="email-compose.html">Compose Email</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="widgets.html">Widgets</a>
+									</li>
+									<li class="has-submenu">
+										<a href="#">Charts</a>
+										<ul class="submenu">
+											<li><a href="chart-flot.html">Flot Chart</a></li>
+											<li><a href="chart-morris.html">Morris Chart</a></li>
+											<li><a href="chart-google.html">Google Chart</a></li>
+											<li><a href="chart-chartist.html">Chartist Chart</a></li>
+											<li><a href="chart-chartjs.html">Chartjs Chart</a></li>
+											<li><a href="chart-sparkline.html">Sparkline Chart</a></li>
+											<li><a href="chart-knob.html">Jquery Knob</a></li>
+										</ul>
+									</li>
+									<li class="has-submenu">
+										<a href="#">Forms</a>
+										<ul class="submenu">
+											<li><a href="form-elements.html">Form Elements</a></li>
+											<li><a href="form-advanced.html">Form Advanced</a></li>
+											<li><a href="form-validation.html">Form Validation</a></li>
+											<li><a href="form-pickers.html">Form Pickers</a></li>
+											<li><a href="form-wizard.html">Form Wizard</a></li>
+											<li><a href="form-mask.html">Form Masks</a></li>
+											<li><a href="form-summernote.html">Summernote</a></li>
+											<li><a href="form-wysiwig.html">Wysiwig Editors</a></li>
+											<li><a href="form-x-editable.html">X Editable</a></li>
+											<li><a href="form-uploads.html">Multiple File Upload</a></li>
+										</ul>
+									</li>
+									<li class="has-submenu">
+										<a href="#">Icons</a>
+										<ul class="submenu">
+											<li><a href="icons-materialdesign.html">Material Design</a></li>
+											<li><a href="icons-dripicons.html">Dripicons</a></li>
+											<li><a href="icons-fontawesome.html">Font awesome</a></li>
+											<li><a href="icons-feather.html">Feather Icons</a></li>
+											<li><a href="icons-simpleline.html">Simple Line Icons</a></li>
+										</ul>
+									</li>
+
+									<li class="has-submenu">
+										<a href="#">Tables</a>
+										<ul class="submenu">
+											<li><a href="tables-basic.html">Basic Tables</a></li>
+											<li><a href="tables-datatable.html">Data Tables</a></li>
+											<li><a href="tables-responsive.html">Responsive Table</a></li>
+											<li><a href="tables-tablesaw.html">Tablesaw Tables</a></li>
+											<li><a href="dishmanage.html">Foo Tables</a></li>
+										</ul>
+									</li>
+
+									<li class="has-submenu">
+										<a href="#">Maps</a>
+										<ul class="submenu">
+											<li><a href="maps-google.html">Google Maps</a></li>
+											<li><a href="maps-vector.html">Vector Maps</a></li>
+											<li><a href="maps-mapael.html">Mapael Maps</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li class="has-submenu">
+								<a href="#"><i class="icon-docs"></i>Pages</a>
+								<ul class="submenu megamenu">
+									<li>
+										<ul>
+											<li><a href="page-starter.html">Starter Page</a></li>
+											<li><a href="page-login.html">Login</a></li>
+											<li><a href="page-register.html">Register</a></li>
+											<li><a href="page-logout.html">Logout</a></li>
+											<li><a href="page-recoverpw.html">Recover Password</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li><a href="page-lock-screen.html">Lock Screen</a></li>
+											<li><a href="page-confirm-mail.html">Confirm Mail</a></li>
+											<li><a href="page-404.html">Error 404</a></li>
+											<li><a href="page-404-alt.html">Error 404-alt</a></li>
+											<li><a href="page-500.html">Error 500</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li class="has-submenu">
+								<a href="#"><i class="icon-present"></i>Extra Pages</a>
+								<ul class="submenu megamenu">
+									<li>
+										<ul>
+											<li><a href="extras-timeline.html">Timeline</a></li>
+											<li><a href="extras-profile.html">Profile</a></li>
+											<li><a href="extras-invoice.html">Invoice</a></li>
+											<li><a href="extras-faq.html">FAQ</a></li>
+											<li><a href="extras-pricing.html">Pricing</a></li>
+											<li><a href="extras-email-template.html">Email Templates</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li><a href="extras-ratings.html">Ratings</a></li>
+											<li><a href="extras-search-results.html">Search Results</a></li>
+											<li><a href="extras-gallery.html">Gallery</a></li>
+											<li><a href="extras-maintenance.html">Maintenance</a></li>
+											<li><a href="extras-coming-soon.html">Coming Soon</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+						</ul>
+						<!-- End navigation menu -->
+					</div> <!-- end #navigation -->
+				</div> <!-- end container -->
+			</div> <!-- end navbar-custom -->
+		</header>
+		<!-- End Navigation Bar-->
+
+
+		<div class="wrapper">
+			<div class="container-fluid">
+
+				<!-- Page-Title -->
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="page-title-box">
+							<div class="btn-group pull-right">
+								<ol class="breadcrumb hide-phone p-0 m-0">
+									<li class="breadcrumb-item active">历史流水</li>
+								</ol>
+							</div>
+							<h4 class="page-title">历史流水查询</h4>
+						</div>
+					</div>
+				</div>
+				<!-- end page title end breadcrumb -->
+
+
+				<div class="row">
+					<!-- line chart -->
+					<div class="col-lg-12">
+						<div class="card-box">
+							<h4 id="yeartitle" class="header-title m-t-0"><b>年视图查询</b>
+								<select class="custom-select mt-3" id="year_select" style="width:10%;display: inline;height: 30px;position: relative;left: 50px;top:-10px;" onfocus="selectedIndex=-1;">
+									<option value="2020">2020</option>
+									<option value="2019">2019</option>
+									<option value="2018">2018</option>
+									<option value="2017">2017</option>
+								</select>
+								<span class="badge badge-danger" id="year_show" style="float: right;">请在左边下拉框选择年份</span>
+							</h4>
+
+							<div class="mt-4">
+								<div id="line-chart-tooltips" class="ct-chart ct-golden-section"></div>
+							</div>
+						</div>
+					</div>
+					<!-- line chart end -->
+				</div>
+				<!-- end row -->
+
+				<div class="row">
+					<div class="col-12">
+						<div class="card-box table-responsive">
+							<h4 class="m-t-0 header-title">
+								<b>月视图查询</b>
+								<input class="form-control" id="month_select" type="month" name="month" style="width:15%; display: inline; height: 30px; position: relative;left: 50px;">
+							</h4>
+							<p class="text-muted font-14 m-b-30">
+								选择不同月份查询月度每日收益和订单概况
+							</p>
+							<!-- datatable-buttons -->
+							<table id="monthorder_search" class="table table-striped table-bordered" cellspacing="0" width="100%">
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- end row -->
+				
+				<div class="row">
+					<div class="col-12">
+						<div class="card-box table-responsive">
+							<h4 class="m-t-0 header-title">
+								<b>日视图查询</b>
+								<input class="form-control" id="day_select" type="date" name="date" style="width:15%; display: inline; height: 30px; position: relative;left: 50px;">
+							</h4>
+							<p class="text-muted font-14 m-b-30">
+								选择某一天查看当日所有订单详细信息
+							</p>
+							<table id="dayorder_search" class="table table-striped table-bordered" cellspacing="0" width="100%">
+								<!-- <thead>
+									<tr>
+										<th>时间</th>
+										<th>总收入</th>
+										<th>总订单数</th>
+										<th>已完成</th>
+										<th>已取消</th>
+									</tr>
+								</thead> -->
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- end row -->
+				
+				<!-- 测试用的按钮 -->
+				<!-- <button onclick="reloadtable()">test</button> -->
+
+			</div> <!-- end container -->
+		</div>
+		<!-- end wrapper -->
+
+
+		<!-- jQuery  -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/waves.js"></script>
+		<script src="assets/js/jquery.slimscroll.js"></script>
+
+		<!--Chartist Chart-->
+		<script src="../plugins/chartist/js/chartist.min.js"></script>
+		<script src="../plugins/chartist/js/chartist-plugin-tooltip.min.js"></script>
+		<script src="assets/pages/mychart_init.js"></script>
+		<!-- <script src="assets/pages/jquery.chartist.init.js"></script> -->
+
+		<!-- App js -->
+		<script src="assets/js/jquery.core.js"></script>
+		<script src="assets/js/jquery.app.js"></script>
+
+		<!-- Required datatable js -->
+		<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+		<script src="../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+		<!-- Buttons examples -->
+		<script src="../plugins/datatables/dataTables.buttons.min.js"></script>
+		<script src="../plugins/datatables/buttons.bootstrap4.min.js"></script>
+		<script src="../plugins/datatables/jszip.min.js"></script>
+		<script src="../plugins/datatables/pdfmake.min.js"></script>
+		<script src="../plugins/datatables/vfs_fonts.js"></script>
+		<script src="../plugins/datatables/buttons.html5.min.js"></script>
+		<script src="../plugins/datatables/buttons.print.min.js"></script>
+
+		<!-- 自定义的函数 -->
+		<script>
+			
+			window.onload = function(){
+				$.post("http://39.98.127.39:8080/getorderbetween",
+				{"begintime":"2020-01-01","endtime":"2020-01-01"},
+				function(data,status)
+				{
+					if(status == "success"&&data == "login")
+					{			
+						location.href = "page-login.html";
+					}
+					else if(status == "error")
+					{
+						alert("服务器似乎出了点小问题，客官稍等");
+						location.href = "page-404.html";
+					}
+					else if(status == "timeout")
+					{
+						alert("您的网络似乎已断开，请重新连接");
+						location.href = "page-500.html";
+					}
+				}
+			});
+			var selected = $("#year_select").val(); //所选年份，字符串类型,后期需要类型转换
+			
+			// 数组格式的数据
+			//行数据格式
+			// var dataset = [
+			// 	["2", "30000", "1200", "1160", "40"],
+			// 	["3", "30000", "1200", "1160", "50"]
+			// ]
+			// var dataset2 = [
+			// 	["4", "30000", "1200", "1160", "40"],
+			// 	["5", "30000", "1200", "1160", "50"]
+			// ]
+			//Buttons examples
+			// table = $('#datatable-buttons').DataTable({
+			// 	lengthChange: false,
+			// 	buttons: ['copy', 'excel', 'pdf'],
+			// 	data: dataset,
+			// 	// columns:[{"title":"月份","data":"day"},{"title":"总收入","data":"benefit"},{"title":"总订单数","data":"ordernum"},{"title":"已完成","data":"completenum"},{"title":"已取消","data":"cancelnum"}]
+			// });
+			// table.buttons().container()
+			// 	.appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
+			// var currentPage = table.page();
+			// // table.clear();//清除原有的行，不清除表头
+			// // table.rows([0,1]).remove().draw(false)//删除第一第二行
+			// // table.rows(0).remove().draw(false)//删除第一行
+			// table.rows.add(dataset2);//添加新的行数据组
+			// // table.row.add({"id":"12","name":"3231",...})//添加新的数据行
+			// table.page(currentPage).draw(false);
+			
+			//模拟年视图刷新数据
+			var yeardatajson = {"1":15,"2":18,"3":20,"4":25,"5":20,"6":27,"7":"28","8":30,"9":18,"10":15,"11":12,"12":20}
+			
+			//模拟月视图json格式的数据
+			var dataset = [{"day":"1","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"2","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"4","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"5","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"6","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"7","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"8","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"3","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"9","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			]
+			
+			//月视图模拟刷新的数据源
+			var dataset2 = [{"day":"4","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"5","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"6","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20,},
+			{"day":"7","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"8","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"6","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"9","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"6","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"6","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"10","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			{"day":"11","benefit":20000,"ordernum":1000,"completenum":980,"cancelnum":20},
+			]
+			
+			//日视图数据
+			var daydata = [{"order_id":"123","settlement_time":"2020-08-01 11:22:33","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"124","settlement_time":"2020-08-01 11:22:34","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"126","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"128","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"129","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"120","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"129","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"121","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			]
+			
+			//日视图模拟刷新数据
+			var daydata2 =  [{"order_id":"234","settlement_time":"2020-08-01 11:22:33","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"235","settlement_time":"2020-08-01 11:22:34","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"236","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"237","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"125","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"129","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"238","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"120","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"239","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			{"order_id":"121","settlement_time":"2020-08-01 11:22:35","user_id":"23213123","table_id":"12","order_state":1,"total_price":"120","order_discount":"12"},
+			]
+			
+			//月视图table初始化
+			var monthtable = $('#monthorder_search').DataTable({
+				lengthChange: false,
+				buttons: ['copy', 'excel', 'pdf'],
+				data: dataset,
+				columns:[{"title":"日期","data":"day"},{"title":"总收入","data":"benefit"},{"title":"总订单数","data":"ordernum"},{"title":"已完成","data":"completenum"},{"title":"已取消","data":"cancelnum"}]
+			});
+			monthtable.buttons().container()
+				.appendTo('#monthorder_search_wrapper .col-md-6:eq(0)');
+			//当前页号，用于后端分页，暂不用
+			var currentPage = monthtable.page();
+			
+			//日视图table初始化
+			var daytable = $('#dayorder_search').DataTable({
+				lengthChange: false,
+				buttons: ['copy', 'excel', 'pdf'],
+				data: daydata,
+				columns:[
+				{"title":"订单编号","data":"order_id"},
+				{"title":"桌号","data":"table_id"},
+				{"title":"用户编号","data":"user_id"},
+				{"title":"结算时间","data":"settlement_time"},
+				{"title":"状态","data":"order_state"},
+				{"title":"总额","data":"total_price"},
+				{"title":"折扣","data":"order_discount"},
+				]
+			});
+			daytable.buttons().container()
+				.appendTo('#dayorder_search_wrapper .col-md-6:eq(0)');
+			
+			// table.clear();//清除原有的行，不清除表头
+			// table.rows([0,1]).remove().draw(false)//删除第一第二行
+			//table.rows("#003").remove()//删除id为003的行
+			// table.rows(0).remove().draw(false)//删除第一行
+			
+			// table.rows.add(dataset2);//添加新的行数据组
+			// table.rows([0,1]).remove().draw(false);
+			// table.row.add({"id":"12","name":"3231",...})//添加新的数据行
+			//除data指定外的数据，其余数据操作如add，需要后续代码至少加上draw（false），比如table.row.add({"id":"12","name":"3231",...}).draw(false)
+			
+			// table.page(currentPage).draw(false);//防止表格跳转到第一页，新操作如add，remove必须要
+			
+			//重新加载数据，重新绘制页面
+			function reloadtable(type,pagedata)
+			{
+				if(type == "year")
+				{
+					//ajax传递数据，处理生成yeardata
+					var yeardata = {
+						series: [{
+							name: '收入/千',
+							data: pagedata,
+						}, ]
+					}
+					yearchart.update(yeardata);
+				}
+				if(type == "month")
+				{
+					var currentPage = monthtable.page();
+					monthtable.clear();
+					//这里通过ajax获取后端数据，处理后生成dataset2
+					monthtable.rows.add(pagedata).draw(false);
+					// monthtable.page(currentPage).draw(false);
+				}
+				if(type=="day")
+				{
+					var currentPage = daytable.page();
+					daytable.clear();
+					daytable.rows.add(pagedata).draw(false);
+				}
+			}
+			 
+			// function deleterow()
+			// {
+			// 	table.rows([0,1]).remove().draw(false);//额外数据操作需要添加draw（false）
+			// 	console.log("deleterow triggered")
+			// }
+			
+			// function get_yeardata(year,yeardata)
+			// {
+			// 	for(let month = 1;month<=12;month++)
+			// 	{
+			// 		let beginmonth = month<10?"0"+month : month.toString();
+			// 		let endmonth = month<9?"0"+(month+1) : (month+1);
+			// 		let begintime = year+"-"+beginmonth+"-01";
+			// 		let endtime = year+"-"+endmonth+"-01";
+			// 		let ajaxcount = 0;
+			// 		$.post("http://localhost:8080/getdayorderbetween",
+			// 		{"begintime":begintime,"endtime":endtime},
+			// 		function(data,status){
+			// 			if(status == "success")
+			// 			{
+			// 				console.log(data);
+			// 				let total = 0;
+			// 				for(let i = 0;i<data.length;i++)
+			// 				{
+			// 					total += data[i].total_price;
+			// 				}
+			// 				yeardata[month-1] = total;
+			// 				ajaxcount += 1;
+			// 				console.log("month"+month+":"+total);
+			// 			}
+			// 		})//end ajax
+			// 		if(ajaxcount == 12)
+			// 		{
+						
+			// 		}
+			// 	}//end for
+			// }
+		
+			
+			function yearview(year)
+			{
+			let yeardata = [];
+			let ajaxcount = 0;
+			for(let month = 1;month<=12;month++)
+			{
+				let beginmonth = month<10?"0"+month : month.toString();
+				let endmonth = month<9?"0"+(month+1) : (month+1);
+				let begintime = year+"-"+beginmonth+"-01";
+				let endtime = year+"-"+endmonth+"-01";
+				$.post("http://39.98.127.39:8080/getorderbetween",
+				{"begintime":begintime,"endtime":endtime},
+				function(data,status){
+					if(status == "success")
+					{
+						console.log(data);
+						let total = 0;
+						for(let i = 0;i<data.length;i++)
+						{
+							total += data[i].total_price;
+						}
+						yeardata[month-1] = total;
+						ajaxcount += 1;
+						if(ajaxcount == 12)
+						{
+							reloadtable("year",yeardata);
+						}
+					}
+				})//end ajax
+			}//end for
+			}
+			
+			//年视图年选择组件点击触发事件
+			$("#year_select").change(function(){
+				year = $(this).val();
+				console.log(year)
+				console.log("year_select change triggered")
+				$("#year_show").text(year+"年");
+				// reloadtable("year");
+				yearview(year);
+				//此处添加ajax获取后台订单数据
+				//模拟重绘chart数据数据
+			})
+			
+			function getdaycount(year,month)
+			{
+				let daynum = {"1":31,"2":28,"3":31,"4":30,"5":31,"6":30,"7":31,"8":31,"9":30,"10":31,"11":30,"12":31};
+				if((year%4 == 0&& year%100 != 0)||year%400 == 0)
+				{
+					daynum["2"] = 29;
+				}
+				return daynum[month.toString()];
+			}
+			
+			function ruledata(date)//规约数据
+			{
+				return date<10?"0"+date:date.toString();
+			}
+			
+			//根据年月日获取下一天日期
+			function getnextday(year,month,day)
+			{
+				let nextday;
+				let daycount = getdaycount(year,month);
+				if(day!=daycount)
+				{
+					nextday = year+"-"+ruledata(month)+"-"+ruledata(day+1);
+					return nextday;
+				}
+				else if(day == daycount&& month!=12)
+				{
+					nextday = year+"-"+ruledata(month+1)+"-"+"01";
+					return nextday;
+				}
+				else
+				{
+					nextday = (year+1)+"-01-01";
+					return nextday;
+				}
+			}
+			
+			function divideToDay(year,month,monthorder)
+			{
+				dayorder = [];
+				let daycount = getdaycount(year,month)
+				for(let i = 1;i<=daycount;i++)
+				{
+					dayorder[i] = {"ordernum":0,"benefit":0,"day":0,"completenum":0,"cancelnum":0};
+				}
+				for(let i = 0;i<monthorder.length;i++)
+				{
+					let temptime = monthorder[i].settlement_time
+					let strday = temptime.substring(8,10);
+					console.log("strday:"+strday);
+					let intday  = parseInt(strday);
+					dayorder[intday].benefit += monthorder[i].total_price;
+					dayorder[intday].ordernum += 1;
+					if(monthorder[i].order_state == -1)
+					{
+						dayorder[intday].cancelnum += 1;
+					}
+				}
+				for(let n = 1;n<=daycount;n++)
+				{
+					dayorder[n].day = n;
+					dayorder[n].completenum = dayorder[n].ordernum - dayorder[n].cancelnum;
+				}
+				dayorder.splice(0,1);
+				console.log("dayorder:")
+				console.log(dayorder)
+				return dayorder;
+			}
+			
+			//月视图月份选择组件点击触发事件
+			$("#month_select").change(function(){
+				month = $(this).val();
+				let begintime = month+"-01";
+				let endtime;
+				let strmonth = month.substring(5,7);
+				let stryear = month.substring(0,4);
+				let intmonth = parseInt(strmonth);
+				let intyear = parseInt(stryear);
+				let dayview = [{}];
+				if(intmonth == 12)
+				{
+					let nextyear = intyear+1;
+					endtime = nextyear+"-01-01";
+				}
+				else{
+					let endmonth = (intmonth+1)<10?"0"+(intmonth+1):(intmonth+1).toString();
+					endtime = stryear+"-"+endmonth+"-01";
+				}//年月处理
+				
+				$.post("http://39.98.127.39:8080/getorderbetween",
+				{"begintime":begintime,"endtime":endtime},
+				function(data,status){
+					if(status == "success")
+					{
+						console.log(data);
+						// dayview = divideToDay(data);
+						// let dayview = divideToDay(intyear,intmonth,data);
+						// console.log(dayview);
+						reloadtable("month",divideToDay(intyear,intmonth,data));
+					}
+				})
+			})
+			
+			//日视图日期选择组件点击触发事件
+			$("#day_select").change(function(){
+				day = $(this).val();
+				let stryear = day.substring(0,4);
+				let strmonth = day.substring(5,7);
+				let strday = day.substring(8,10);
+				let intyear = parseInt(stryear);
+				let intmonth = parseInt(strmonth);
+				let intday = parseInt(strday);
+				let nextday = getnextday(intyear,intmonth,intday);
+				$.post("http://39.98.127.39:8080/getorderbetween",
+				{"begintime":day,"endtime":day},
+				function(data,status){
+					if(status == "success")
+					{
+						console.log(data);
+						reloadtable("day",data);
+					}
+				},"json");//end ajax
+			})
+			
+			
+			//匿名函数,设置当前最高可选日期,加载即触发
+			$(function(){
+			    //得到当前时间
+				var date_now = new Date();
+				//得到当前年份
+				var year = date_now.getFullYear();
+				//得到当前月份
+				//注：
+				//  1：js中获取Date中的month时，会比当前月份少一个月，所以这里需要先加一
+				//  2: 判断当前月份是否小于10，如果小于，那么就在月份的前面加一个 '0' ， 如果大于，就显示当前月份
+				var month = date_now.getMonth()+1 < 10 ? "0"+(date_now.getMonth()+1) : (date_now.getMonth()+1);
+				//得到当前日子（多少号）
+				var date = date_now.getDate() < 10 ? "0"+date_now.getDate() : date_now.getDate();
+				//设置input标签的max属性
+				$("#day_select").attr("max",year+"-"+month+"-"+date);
+				$("#month_select").attr("max",year+"-"+month);
+			})
+		</script>
+	</body>
+</html>

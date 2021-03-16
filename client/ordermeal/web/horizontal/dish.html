@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- 编辑人：方宇澄 -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>老街烧烤，记录你生活的烟火气</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="state" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <!-- DataTables -->
+        <link href="../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+        <script src="assets/js/modernizr.min.js"></script>
+        <style>
+            table td {
+            max-width: 100px;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+            table td:hover {
+            white-space: normal;
+            overflow: auto;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container-fluid">
+                    <!-- Logo container-->
+                    <div class="logo">
+                        <!-- Text Logo -->
+                        <!-- <a href="index.html" class="logo">
+                            <span class="logo-small"><i class="mdi mdi-radar"></i></span>
+                            <span class="logo-large"><i class="mdi mdi-radar"></i> Highdmin</span>
+                        </a> -->
+                        <!-- Image Logo -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo_sm.png" alt="" height="26" class="logo-small">
+                            <img src="assets/images/logo.png" alt="" height="40" class="logo-large">
+                        </a>
+                    </div>
+                    <!-- End Logo container-->
+                    <div class="menu-extras topbar-custom">
+                        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                   aria-haspopup="false" aria-expanded="false">
+                                    <img src="assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle"> <span class="ml-1 pro-user-name">Admin K <i class="mdi mdi-chevron-down"></i> </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h6 class="text-overflow m-0">Welcome !</h6>
+                                    </div>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fi-head"></i> <span>My Account</span>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fi-cog"></i> <span>Settings</span>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fi-help"></i> <span>Support</span>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fi-lock"></i> <span>Lock Screen</span>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="page-login.html" class="dropdown-item notify-item">
+                                        <i class="fi-power"></i> <span>Logout</span>
+                                    </a>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end menu-extras -->
+                    <div class="clearfix"></div>
+                </div> <!-- end container -->
+            </div>
+            <!-- end topbar-main -->
+        </header>
+        <!-- End Navigation Bar-->
+        <div class="wrapper">
+            <div class="container-fluid">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="btn-group pull-right">
+                                <ol class="breadcrumb hide-phone p-0 m-0">
+                                    <li class="breadcrumb-item"><a href="dish.html">菜品管理</a></li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title"><i class="mdi mdi-food" style="display: inline;"></i>菜品</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title end breadcrumb -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <h4 class="header-title">菜品信息</h4>
+                            <table class="table table-hover m-0 dish-list table-actions-bar dt-responsive nowrap" cellspacing="0" width="100%" id="datatable">
+                                <thead>
+                                <tr>
+                                    <th>菜品编号</th>
+                                    <th>菜品图片</th>
+                                    <th>菜品名称</th>
+                                    <th>描述</th>
+                                    <th>单价</th>
+                                    <th>折扣</th>
+                                    <th>状态</th>
+                                    <th class="hidden-sm">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- end col -->
+                </div>
+                <!-- end row -->
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <script src="../plugins/datatables/dataTables.responsive.min.js"></script>
+        <!-- App js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#datatable').dataTable();
+            });
+        </script>
+        <script type="text/javascript">
+            window.onload =  function() //无参形式,测试用
+            {
+                console.log("onload success")
+                $.get("http://localhost:8080/dish/show_dish_byState",
+                    {"state":1,"page_num":1,"page_size":6},
+                    function(data,status)
+                    {
+                        if(status == "success")
+                        {
+                            console.log("success");
+                            console.log(data.length);
+                            console.log(data);
+                            creatTablefromJson(data);
+                            // dishtable = $('#datatable').dataTable();
+                            $('#datatable').dataTable();
+                        }
+                    },"json")
+            };
+        </script>
+        <script type="text/javascript">//自定义函数区域
+            var dishjsonstr = '[{"dish_id":"#001","picture":"assets/images/dish/烤羊肉串.jpg","dish_name":"烤羊肉串","description":"新疆烤羊肉串，是新疆民族特色的风味小吃。色泽酱黄油亮，肉质鲜嫩软脆，味道麻辣醇香，独具特别风味。据古书记载，烤羊肉串在中国已有1800多年的历史。","dish_price":"2元/串","discount":"0.8","quantity":8},{"dish_id":"#002","picture":"assets/images/dish/蜜汁烤鸡翅.jpg","dish_name":"蜜汁烤鸡翅","description":"色泽红润饱满，油光发亮，口感细嫩爽滑，齿颊留香，回味甜蜜；有着鸿运当头，甜蜜美满，祥和幸福的文化预意。","dish_price":"5元/串","discount":"1","quantity":0},{"dish_id":"#003","picture":"assets/images/dish/烤土豆.jpg","dish_name":"烤土豆","description":"土豆片的口感比较香脆，凡是吃过的人应该都对它记忆犹新。烹饪简单，香软可口，适合冬天吃。","dish_price":"2元/串","discount":"0.8","quantity":8}]';
+            var dishjson = JSON.parse(dishjsonstr);
+            console.log(dishjson[1].dish_id);
+            function creatTablefromJson(jsondata)
+            {
+                console.log("script")
+                for(var i = 0;i<jsondata.length;i++)
+                {
+                    var tablerow = "<tr>"+
+                        "<td name=\"dish_id\" class=\"dish_id\">"+ jsondata[i].dish_id+ "</td>"+
+                        "<td>"+
+                        "<img src="+jsondata[i].picture+" alt='contact-img' title='contact-img' style='width: 200px; height: 150px;' />"+
+                        "</td>"+
+                        "<td>"+"<span>"+jsondata[i].dish_name+"</span>"+ "</td>>"+
+                        "<td >"+ "<div>"+jsondata[i].description+"</div>"+ "</td>"+
+                        "<td>"+ jsondata[i].dish_price+ "</td>"+
+                        "<td>"+ jsondata[i].discount+ "</td>"+
+                        "<td>"+ statestr(jsondata[i].quantity)+ "</td>"+
+                        "<td>"+
+                        "					<div class=\"btn-group dropdown\" style='width: 200px;'>"+
+                        "						<a href=\"javascript: void(0);\" class=\"table-action-btn dropdown-toggle arrow-none btn btn-light btn-sm\" data-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"mdi mdi-dots-horizontal\"></i></a>"+
+                        "						<div class=\"dropdown-menu dropdown-menu-right\">"+
+                        "							<a class=\"dropdown-item\" onclick=\"dishedit(this)\"><i class=\"mdi mdi-pencil mr-2 text-muted font-18 vertical-middle\"></i>编辑</a>"+
+                        "							<a class=\"dropdown-item\" onclick=\"dishcancel(this)\"><i class=\"mdi mdi-delete mr-2 text-muted font-18 vertical-middle\"></i>删除</a>"+
+                        "						</div>"+
+                        "					</div>"+
+                        "</td>"+
+                        "</tr>";
+                    $("#datatable").append(tablerow);
+                }
+            }//creatTablefromJson function end
+        function statestr(i)
+        {
+            if(i == 0)
+            {
+                return "<span class='badge badge-secondary'>未上架</span>"
+            }
+            else if(i > 0)
+            {
+                return "<span class='badge badge-success'>上架中</span>"
+            }
+        }//statestr end
+        function dishedit(e)
+        {
+            console.log(e.innerHTML)
+            var dishnode =  e.parentNode.parentNode.parentNode.parentNode;
+            console.log(dishnode instanceof Element);
+            var dish_id = dishnode.getElementsByClassName("dish_id")[0].innerText;
+            console.log(dish_id);
+            localStorage.setItem("dish_id",dish_id);
+            location.href = "dishedit.html";
+        }
+        function dishcancel()
+        {
+            alert("删除成功");
+        }
+        creatTablefromJson(dishjson);
+        </script>
+    </body>
+</html>

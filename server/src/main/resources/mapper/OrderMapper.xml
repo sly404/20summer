@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manager.login.Mapper.OrderMapper">
+    <resultMap id="result_order" type="com.manager.login.Entity.Order">
+        <result column="order_id" jdbcType="INTEGER" property="order_id"/>
+        <result column="build_time" jdbcType="TIMESTAMP" property="build_time"/>
+        <result column="settlement_time" jdbcType="TIMESTAMP" property="settlement_time"/>
+        <result column="user_id" jdbcType="INTEGER" property="user_id"/>
+        <result column="table_id" jdbcType="INTEGER" property="table_id"/>
+        <result column="state" jdbcType="INTEGER" property="order_state"/>
+        <result column="total_price" jdbcType="DECIMAL" property="total_price"/>
+        <result column="discount" jdbcType="DECIMAL" property="order_discount"/>
+        <result column="note" jdbcType="VARCHAR" property="order_note"/>
+        <result column="user_name" jdbcType="VARCHAR" property="user_name"/>
+    </resultMap>
+    <insert id="insert"  parameterType="com.manager.login.Entity.Order" useGeneratedKeys="true" keyProperty="order_id">
+        insert into order(
+        build_time,settlement_time,user_id,table_id,state,total_price,discount,note,user_name
+        )
+        values(
+        #{build_time},#{settlement_time},#{user_id},#{table_id},#{order_state},#{total_price},#{discount},#{order_note},#{user_name}
+        );
+    </insert>
+    <select id="SelectByState" parameterType="int" resultMap="result_order">
+        select * from test1.order where state=#{state} limit #{offset},#{pagesize};
+    </select>
+    <select id="SelectByID" parameterType="int" resultMap="result_order">
+        select * from test1.order where order_id=#{order_id};
+    </select>
+    <delete id="DeleteByID" parameterType="int">
+        delete from test1.order where order_id=#{order_id};
+    </delete>
+    <update id="Update" parameterType="com.manager.login.Entity.Order">
+    update test1.order set state=#{order_state},total_price=#{total_price},discount=#{order_discount},note=#{order_note} where order_id=#{order_id};
+    </update>
+</mapper>

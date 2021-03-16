@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<!-- 编辑人：施立耀 -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Highdmin - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- DataTables -->
+        <link href="../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+        <script src="assets/js/modernizr.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container-fluid">
+
+                    <!-- Logo container-->
+                    <div class="logo">
+                        <!-- Text Logo -->
+                        <!-- <a href="index.html" class="logo">
+                            <span class="logo-small"><i class="mdi mdi-radar"></i></span>
+                            <span class="logo-large"><i class="mdi mdi-radar"></i> Highdmin</span>
+                        </a> -->
+                        <!-- Image Logo -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo_sm.png" alt="" height="26" class="logo-small">
+                            <img src="assets/images/logo.png" alt="" height="40" class="logo-large">
+                        </a>
+
+                    </div>
+                    <!-- End Logo container-->
+
+
+                    <div class="menu-extras topbar-custom">
+
+                        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+
+                            <li class="menu-item">
+                                <!-- Mobile menu toggle-->
+                                <a class="navbar-toggle nav-link">
+                                    <div class="lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- End mobile menu toggle-->
+                            </li>
+                            <li class="dropdown notification-list hide-phone">
+                                <!-- <a class="nav-link dropdown-toggle waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                   aria-haspopup="false" aria-expanded="false">
+                                    <i class="mdi mdi-earth"></i> English  <i class="mdi mdi-chevron-down"></i>
+                                </a> -->
+                                <div class="dropdown-menu dropdown-menu-right">
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        Spanish
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        Italian
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        French
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        Russian
+                                    </a>
+
+                                </div>
+                            </li>
+
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+                                   aria-haspopup="false" aria-expanded="false">
+                                    <i class="fi-bell noti-icon"></i>
+                                    <span class="badge badge-danger badge-pill noti-icon-badge">4</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h6 class="m-0"><span class="float-right"><a href="" class="text-dark"><small>Clear All</small></a> </span>Notification</h6>
+                                    </div>
+
+                                    <div class="slimscroll" style="max-height: 230px;">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-comment-account-outline"></i></div>
+                                            <p class="notify-details">Caleb Flakelar commented on Admin<small class="text-muted">1 min ago</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-info"><i class="mdi mdi-account-plus"></i></div>
+                                            <p class="notify-details">New user registered.<small class="text-muted">5 hours ago</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-danger"><i class="mdi mdi-heart"></i></div>
+                                            <p class="notify-details">Carlos Crouch liked <b>Admin</b><small class="text-muted">3 days ago</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-warning"><i class="mdi mdi-comment-account-outline"></i></div>
+                                            <p class="notify-details">Caleb Flakelar commented on Admin<small class="text-muted">4 days ago</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-purple"><i class="mdi mdi-account-plus"></i></div>
+                                            <p class="notify-details">New user registered.<small class="text-muted">7 days ago</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-custom"><i class="mdi mdi-heart"></i></div>
+                                            <p class="notify-details">Carlos Crouch liked <b>Admin</b><small class="text-muted">13 days ago</small></p>
+                                        </a>
+                                    </div>
+
+                                    <!-- All-->
+                                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                        View all <i class="fi-arrow-right"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+                                   aria-haspopup="false" aria-expanded="false">
+                                    <i class="fi-speech-bubble noti-icon"></i>
+                                    <span class="badge badge-dark badge-pill noti-icon-badge">6</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h6 class="m-0"><span class="float-right"><a href="" class="text-dark"><small>Clear All</small></a> </span>Chat</h6>
+                                    </div>
+
+                                    <div class="slimscroll" style="max-height: 230px;">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <p class="notify-details">Cristina Pride</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-3.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <p class="notify-details">Sam Garret</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <p class="notify-details">Karen Robinson</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Wow that's great</p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-5.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <p class="notify-details">Sherry Marshall</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Hi, How are you? What about our next meeting</p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-6.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <p class="notify-details">Shawn Millard</p>
+                                            <p class="text-muted font-13 mb-0 user-msg">Yeah everything is fine</p>
+                                        </a>
+                                    </div>
+
+                                    <!-- All-->
+                                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                        View all <i class="fi-arrow-right"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                   aria-haspopup="false" aria-expanded="false">
+                                    <img src="assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle"> <span class="ml-1 pro-user-name">Maxine K <i class="mdi mdi-chevron-down"></i> </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h6 class="text-overflow m-0">Welcome !</h6>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fi-head"></i> <span>My Account</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fi-cog"></i> <span>Settings</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fi-help"></i> <span>Support</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="fi-lock"></i> <span>Lock Screen</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a class="dropdown-item notify-item" onclick="logout()">
+                                        <i class="fi-power"></i> <span>Logout</span>
+                                    </a>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end menu-extras -->
+
+                    <div class="clearfix"></div>
+
+                </div> <!-- end container -->
+            </div>
+            <!-- end topbar-main -->
+        </header>
+        <!-- End Navigation Bar-->
+
+
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="btn-group pull-right">
+                                <ol class="breadcrumb hide-phone p-0 m-0">
+                                    <li class="breadcrumb-item"><a href="#">订单管理</a></li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Tickets</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title end breadcrumb -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-box">
+                            <h4 class="header-title"><b>订单管理</b></h4>
+
+                            <!-- <div class="text-center mt-4 mb-4">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-3">
+                                        <div class="card-box widget-flat border-custom bg-custom text-white">
+                                            <i class="fi-tag"></i>
+                                            <h3 class="m-b-10">25563</h3>
+                                            <p class="text-uppercase m-b-5 font-13 font-600"><b>总订单数</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3">
+                                        <div class="card-box bg-primary widget-flat border-primary text-white">
+                                            <i class="fi-archive"></i>
+                                            <h3 class="m-b-10">6952</h3>
+                                            <p class="text-uppercase m-b-5 font-13 font-600"><b>待处理订单数</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3">
+                                        <div class="card-box widget-flat border-success bg-success text-white">
+                                            <i class="fi-help"></i>
+                                            <h3 class="m-b-10">18361</h3>
+                                            <p class="text-uppercase m-b-5 font-13 font-600"><b>已完成订单数</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3">
+                                        <div class="card-box bg-danger widget-flat border-danger text-white">
+                                            <i class="fi-delete"></i>
+                                            <h3 class="m-b-10">250</h3>
+                                            <p class="text-uppercase m-b-5 font-13 font-600"><b>已取消订单数</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                            <table class="table table-hover m-0 tickets-list table-actions-bar dt-responsive nowrap" cellspacing="0" width="100%" id="datatable">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        桌号
+                                    </th>
+                                    <th>用户id</th>
+                                    <th>订单号</th>
+                                    <th>订单状态</th>
+                                    <th>下单时间</th>
+									<th>总金额</th>
+									<th>折扣</th>
+                                    <th class="hidden-sm">操作</th>
+                                </tr>
+                                </thead>
+
+                                <tbody><!-- 动态创建的部分 -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- end col -->
+                </div>
+                <!-- end row -->
+
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+
+        <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <script src="../plugins/datatables/dataTables.responsive.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+        <script type="text/javascript">
+    //         $(document).ready(function () {
+				// console.log("ready")
+    //             $('#datatable').dataTable();//datatable innit must be loaded after element has been appended to datatable,maybe it is to flush and redraw page
+    //         });
+        </script> 
+		
+		<script type="text/javascript">
+			window.onload =  function() //无参形式,测试用
+			{
+				console.log("onload success")
+				$.get("http://39.98.127.39:8080/order/show_order_byState",
+				{"state":1,"page_num":1,"page_size":100},
+				function(data,status)
+				{
+					if(status == "success")
+					{
+						console.log(data);
+						// if(data == "login")
+						// {
+						// 	location.href = "page-login.html";
+						// }
+						// else{
+							console.log("success");
+							console.log(data.length);
+							console.log(data);
+							creatTablefromJson(data); 
+							myjson = data;
+							// ordertable = $('#datatable').dataTable();
+							$('#datatable').dataTable();
+						// }
+					}
+				},"json")
+			};
+		</script>
+		
+		<script type="text/javascript">//自定义函数区域
+			// var myjsonstr = '[{"table_id":1,"user_id":123456789871,"user_name":"sly","order_id":11111111111,"state":1,"build_time": "2020/8/3 11:25","settlement_time":"","total_price":120,"discount":18,"note":"safsfsdf"},{"table_id":2,"user_id":123456789872,"user_name":"sndfasfs","order_id":11111111112,"state":-1,"build_time": "2020/8/3 11:40","settlement_time":"","total_price":200,"discount":10,"note":"sdfsfsdffasd"},{"table_id":3,"user_id":123456789873,"user_name":"sndfasfs","order_id":11111111113,"state":0,"build_time": "2020/8/3 11:40","settlement_time":"2020/8/3 11:40:42","total_price":200,"discount":10,"note":"sdfregh"}]';
+			
+			function logout()
+			{
+				sessionStorage.setItem("state","logout");
+				location.href = "page-logout.html";
+			}
+			
+			function creatTablefromJson(jsondata)
+			{
+				console.log("script")
+				for(var i = 0;i<jsondata.length;i++)
+				{
+					var tablerow = "<tr>"+
+						"<td name=\"table_id\" class=\"table_id\"><b>"+jsondata[i].table_id+"</b></td>"+
+						"<td>"+
+							"<a href='javascript: void(0);'>"+
+								"<span class='ml-2'>"+jsondata[i].user_id+"</span>"+
+							"</a>"+
+						"</td>"+
+						
+						"<td name=\"order_id\" class=\"order_id\">"+
+							jsondata[i].order_id+
+						"</td>"+
+					
+						"<td class=\"state\">"+
+							statestr(jsondata[i].order_state)+
+						"</td>"+
+					
+						"<td>"+
+							jsondata[i].build_time+
+						"</td>"+
+						
+						"<td>"+
+							jsondata[i].total_price+
+						"</td>"+
+						
+						"<td>"+
+							jsondata[i].order_discount+
+						"</td>"+
+								
+						"<td>"+
+						"					<div class=\"btn-group dropdown\">"+
+						"						<a href=\"javascript: void(0);\" class=\"table-action-btn dropdown-toggle arrow-none btn btn-light btn-sm\" data-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"mdi mdi-dots-horizontal\"></i></a>"+
+						"						<div class=\"dropdown-menu dropdown-menu-right\">"+
+						"							<a class=\"dropdown-item\" onclick=\"dishmanage(this)\"><i class=\"mdi mdi-pencil mr-2 text-muted font-18 vertical-middle\"></i>编辑菜单</a>"+
+						"							<a class=\"dropdown-item\" onclick=\"ordercheck(this)\"><i class=\"mdi mdi-check-all mr-2 text-muted font-18 vertical-middle\"></i>结算</a>"+
+						"							<a class=\"dropdown-item\" onclick=\"ordercancel(this)\"><i class=\"mdi mdi-delete mr-2 text-muted font-18 vertical-middle\"></i>撤销订单</a>"+
+						"						</div>"+
+						"					</div>"+
+						"				</td>";
+						"</tr>"
+					$("#datatable").append(tablerow);
+				}
+			}//creatTablefromJson function end
+			
+			function statestr(i)
+			{
+				if(i == -1)
+				{
+					return "<span class='badge badge-secondary'>已取消</span>"
+				}
+				else if(i == 1)
+				{
+					return "<span class='badge badge-danger'>待处理</span>"
+				}
+				else if(i == 0)
+				{
+					return "<span class='badge badge-success'>已支付</span>"
+				}
+			}//statestr end
+			
+			function dishmanage(e)
+			{
+				var mynode =  e.parentNode.parentNode.parentNode.parentNode; //mynode is element
+				var order_id = mynode.getElementsByClassName("order_id")[0].innerText;
+				console.log(order_id);//get order_id
+				sessionStorage.setItem("order_id",order_id);//write into localStorage
+				location.href = "dishmanage.html";//redirect the page to dishmanage.html
+			}
+			
+			function ordercheck(e)
+			{
+				var mynode =  e.parentNode.parentNode.parentNode.parentNode; //e is an element,mynode is also an element
+				var order_id = mynode.getElementsByClassName("order_id")[0].innerText;
+				console.log(order_id);//get order_id
+				var selected = matchorder(order_id);
+				sessionStorage.setItem("order_id",order_id);
+				sessionStorage.setItem("order",JSON.stringify(selected));//write the selected order jsonstring into localStorage 
+				location.href = "ordercheck.html";//redirect the page to ordercheck.html
+			}
+			
+			function matchorder(order_id)//match selected order
+			{
+				console.log(order_id);
+				//ajax请求更新订单的state为-1，返回值为boolean
+				for(let i =0,mylength = myjson.length;i<mylength;i++)
+				{
+				if(myjson[i].order_id.toString() == order_id)
+				{
+					myjson[i].state = -1;
+					console.log(myjson[i]);
+					return myjson[i];
+				}
+				}
+				return {};
+			}
+			
+			function ordercancel(e)//response to cancel order event
+			{
+				mynode =  e.parentNode.parentNode.parentNode.parentNode; //e is an element,mynode is also an element
+				// ordertable.api().row(mynode).remove().draw(false)//删除所在行
+				var order_id = mynode.getElementsByClassName("order_id")[0].innerText;
+				var target_order =  matchorder(order_id);
+				//ajax send post data target_order,get boolean result
+				$.post("http://39.98.127.39:8080/order/update_order",
+				{"order_state":-1,"order_discount":8,"note":"菜都少放葱，不要香菜","order_id":order_id},
+				function(data,status){
+					if(status == "success")
+					{
+						console.log("ordercancel return success")
+						if(data==true)
+						{
+							mynode.getElementsByClassName("state")[0].innerHTML = statestr(-1);
+						}
+					}
+				})
+			}
+			// creatTablefromJson(myjson);
+		</script>
+    </body>
+</html>
